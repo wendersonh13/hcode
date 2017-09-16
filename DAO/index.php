@@ -1,7 +1,6 @@
 
 <?php
 
-
 	require_once("config.php");
 	
 //Carrega um usuário
@@ -20,11 +19,15 @@
 
 //carrega um usuario usando o login e a senha
 	//$usuario =  new Usuario();
-	//$usuario->login("user", "12345");
+	//$usuario->login("user", "!@#$");
 	//echo $usuario;
 
 //Criando um novo usuário
-	$aluno = new Usuario("aluno", "@lun0");
+	$aluno = new Usuario();
+
+	$aluno->setDeslogin("aluno");
+	$aluno->setDessenha("@alun0");
+
 	$aluno->insert();
 	echo $aluno;
 
