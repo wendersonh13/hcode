@@ -1,34 +1,53 @@
-
-<?php
+<?php 
 
 	require_once("config.php");
-	
+
 //Carrega um usuário
+	//$root = new Usuario();
 
-	//	$root = new Usuario();
-	//	$root->loadById(7);
-	//	echo $root;
+	//$root->loadbyId(3);
 
-//Carrega um lista de usuarios
+	//echo $root;
+
+//Carrega uma lista de usuários
+
 	//$lista = Usuario::getList();
 	//echo json_encode($lista);
 
-//Carrega um lista de usuario buscando pelo login
-	//$search = Usuario::search("jo");
-	//echo json_encode($search)
+//Carrega uma lista de usuários buscando pelo login
 
-//carrega um usuario usando o login e a senha
-	//$usuario =  new Usuario();
-	//$usuario->login("user", "!@#$");
+	//$search = Usuario::search("jo");
+	//echo json_encode($search);
+
+
+
+//carrega um usuário usando o login e a senha
+	//$usuario = new Usuario();
+	//$usuario->login("root", "!@#$");
+
 	//echo $usuario;
 
 //Criando um novo usuário
-	$aluno = new Usuario();
+	//$aluno = new Usuario("joao", "123");
 
-	$aluno->setDeslogin("aluno");
-	$aluno->setDessenha("@alun0");
+	//$aluno->insert();
 
-	$aluno->insert();
-	echo $aluno;
+	//echo $aluno;
+
+//Alterar um usuário
+	//$usuario = new Usuario();
+
+	//$usuario->loadById(5);
+	//$usuario->update("professor", "!@#¨&*");
+
+	//echo $usuario;
+
+//deleta usuario
+	$usuario = new Usuario();
+	
+	$usuario->loadById(2);
+	$usuario->delete();
+
+	echo $usuario;
 
  ?>

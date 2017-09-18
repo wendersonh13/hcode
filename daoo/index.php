@@ -1,40 +1,53 @@
 <?php 
-require_once("config.php");
-	//-------------------LIST------------------------------
-	//Carrega um usuario.
-	$usuario = new Usuario();
-	$usuario->loadById(3);
-	echo $usuario;
 
-	//Carrega uma lista de usuarios
+	require_once("config.php");
+
+//Carrega um usuário
+	//$root = new Usuario();
+
+	//$root->loadbyId(3);
+
+	//echo $root;
+
+//Carrega uma lista de usuários
+
 	//$lista = Usuario::getList();
 	//echo json_encode($lista);
 
-	//Carrega uma lista de usuarios buscando pelo login
+//Carrega uma lista de usuários buscando pelo login
+
 	//$search = Usuario::search("jo");
 	//echo json_encode($search);
 
-	//Carrega uma lista de usuarios usando login e a senha.
+
+
+//carrega um usuário usando o login e a senha
 	//$usuario = new Usuario();
-	//$usuario->login("user", "123456");
+	//$usuario->login("root", "!@#$");
+
 	//echo $usuario;
 
-	//----------------INSERT-------------------------------
-	//Inserindo novo usuario
-	//$usuario = new Usuario("OctavioT2", "teste2");
-	//$usuario->insert();
-	//echo $usuario;
+//Criando um novo usuário
+	//$aluno = new Usuario("joao", "123");
 
-	//----------------UPDATE--------------------------------
-	//$usuario = new Usuario();
-	//$usuario->loadById(8);
-	//$usuario->update("Tavim", "tavinho1223");
-	//echo $usuario;
+	//$aluno->insert();
 
-	//----------------DELETE--------------------------------
+	//echo $aluno;
+
+//Alterar um usuário
+	$usuario = new Usuario();
+
+	$usuario->loadById(5);
+	$usuario->update("professor", "!@#¨&*");
+
+	echo $usuario;
+
+//deleta usuario
 	//$usuario = new Usuario();
-	//$usuario->loadById(3);
+	
+	//$usuario->loadById(7);
 	//$usuario->delete();
+
 	//echo $usuario;
 
-?>
+ ?>
